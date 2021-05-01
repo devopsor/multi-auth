@@ -21,7 +21,10 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        if (request()->is('admin/*')) {
+            config()->set('fortify.guard', 'admin');
+            config()->set('fortify.home', 'admin/home');
+        }
     }
 
     /**
@@ -44,5 +47,6 @@ class FortifyServiceProvider extends ServiceProvider
             return Limit::perMinute(5)->by($request->session()->get('login.id'));
         });
         Fortify::registerView('auth.register');
+        Fortify::loginView('auth.login');
     }
 }
