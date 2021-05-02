@@ -40,7 +40,7 @@
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
                                     @foreach(config('app.languages') as $langLocale => $langName)
-                                        <a class="dropdown-item" href="{{ url()->current() }}?change_language={{ $langLocale }}">
+                                        <a class="dropdown-item" href="{{ url()->current() }}?lang={{ $langLocale }}">
                                             {{ strtoupper($langLocale) }} ({{ $langName }})
                                             {{-- {{ $langName }} --}}
                                         </a>

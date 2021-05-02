@@ -18,9 +18,9 @@ class SetLocale
         $languages = array_keys(config('app.languages'));
         $route = $request->route();
 
-        if (request('change_language')) {
-            session()->put('language', request('change_language'));
-            $language = request('change_language');
+        if (request('lang')) {
+            session()->put('language', request('lang'));
+            $language = request('lang');
             if (array_key_exists('locale', $route->parameters) && $route->parameters['locale'] != $language) {
                 $route->parameters['locale'] = $language;
 
