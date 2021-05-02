@@ -48,5 +48,21 @@ class FortifyServiceProvider extends ServiceProvider
         });
         Fortify::registerView('auth.register');
         Fortify::loginView('auth.login');
+
+        Fortify::verifyEmailView('auth.verify');
+        Fortify::requestPasswordResetLinkView('auth.passwords.forget');
+
+        Fortify::resetPasswordView(function ($request) {
+            return view('auth.passwords.reset', ['request' => $request]);
+        });
+
+        RateLimiter::for('login', function (Request $request) {
+            return Limit::perMinute(5)->by($request->email . $request->ip());
+        });
+
+        // RateLimiter::for('two-factor', function (Request $request) {
+        //     return Limit::perMinute(5)->by($request->session()->get('login.id'));
+        // });
+
     }
 }

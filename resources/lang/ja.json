@@ -706,5 +706,8 @@
     "Your registered VAT Number is :vatNumber.": "登録されているVAT番号は:vatNumberです。",
     "Zambia": "ザンビア",
     "Zimbabwe": "ジンバブエ",
-    "Zip \/ Postal Code": "郵便番号"
+    "Zip \/ Postal Code": "郵便番号",
+    "Edit Profile": "プロファイル編集",
+    "Update Profile": "更新",
+    "Change Password": "パスワードを変更"
 }

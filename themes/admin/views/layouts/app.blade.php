@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-    <base href="/multi-auth/">
+    <base href="/">
     <!-- Scripts -->
     <script src="{{ 'public/'.mix('js/app.js', 'themes/admin') }}" defer></script>
     <!-- Fonts -->
@@ -20,10 +20,10 @@
 </head>
 <body>
     <div id="app">
-        <nav class="bg-white shadow-sm navbar navbar-expand-md navbar-light">
+        <nav class="bg-blue shadow-sm navbar navbar-expand-md navbar-light">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    <img src="public/themes/admin/images/avatars/logo.jpg" class="nav-img">{{ config('app.name') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
