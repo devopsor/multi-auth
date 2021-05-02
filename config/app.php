@@ -228,5 +228,10 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
     ],
-
+    'languages' => [
+        'en' => 'English',
+        'ja' => '日本語',
+        'zh' => '中文',
+        'ko' => '한국',
+    ],
 ];
