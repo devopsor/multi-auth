@@ -3,21 +3,21 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <base href="/">
+    {{-- <base href="/"> --}}
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ 'public/'. mix('js/app.js', 'themes/frontend') }}" defer></script>
+    <script src="{{mixurl('js/app.js', 'themes/frontend', 'public') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ 'public/'.mix('css/app.css', 'themes/frontend') }}" rel="stylesheet">
+    <link href="{{mixurl('css/app.css', 'themes/frontend','public') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
